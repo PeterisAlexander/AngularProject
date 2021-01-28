@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './business/authentification/component/login-form/login-form.component';
-import { DevEnvironmentGuard } from './core/guard/dev-environment.guard';
+// import { DevEnvironmentGuard } from './core/guard/dev-environment.guard';
 
 const routes: Routes = [
   {

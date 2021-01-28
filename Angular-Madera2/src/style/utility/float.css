@@ -1,0 +1,14 @@
+/* A NE PAS UTILISER (sauf en dernier recours et encore!) */
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.clearfix::after {
+    clear: both;
+    display: table;
+    content: '';
+}

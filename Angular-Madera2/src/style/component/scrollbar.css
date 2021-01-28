@@ -1,0 +1,36 @@
+/* == Barre de scroll fines == */
+.scrollbar-small::-webkit-scrollbar {
+    /* callé sur le rendu de firefox => scrollbar-width: thin  */
+    width: 6px;
+}
+
+/* pour firefox */
+.scrollbar-small,
+.scrollbar-small * {
+    scrollbar-width: thin;
+}
+
+/* == Barre de scroll thème sombre == */
+.scrollbar-dark::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb {
+    background-color: var(--neutral5Faded25);
+    transition: background-color 0.3s ease;
+}
+
+.scrollbar-dark:hover::-webkit-scrollbar-thumb {
+    background-color: var(--neutral5Faded50);
+}
+
+/* pour firefox */
+.scrollbar-dark,
+.scrollbar-dark * {
+    scrollbar-color: var(--neutral5Faded25) transparent;
+}
+
+.scrollbar-dark:hover,
+.scrollbar-dark:hover * {
+    scrollbar-color: var(--neutral5Faded50) transparent;
+}

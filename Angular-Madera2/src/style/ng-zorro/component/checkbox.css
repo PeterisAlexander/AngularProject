@@ -1,0 +1,13 @@
+/*  Permet de mettre un libellé de checkbox sur plusieurs lignes */
+.checkbox-multiLines {
+    align-items: center;
+    display: inline-flex;
+}
+
+.checkbox-multiLines > span:first-child {
+    flex: 0 0 auto;
+}
+
+.checkbox-multiLines > span:nth-child(2) {
+    flex: 1 1 auto;
+}

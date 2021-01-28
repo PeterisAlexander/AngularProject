@@ -1,0 +1,18 @@
+/* Evite que les tags à l'intérieur des cartes ne dépassent de la carte */
+app-card .ant-tag {
+    max-width: 100%;
+}
+
+app-edit-mot-cle .ant-tag {
+    max-width: 100%;
+}
+
+app-edit-mot-cle .anticon-close {
+    margin-right: 0; /* suppression style par défaut */
+}
+
+app-short-list .ant-tag {
+    margin-bottom: -5px; /* alignement visuel pour contrer l'effet du overflow hidden sur l'élément parent */
+    margin-right: 0; /* suppression style par défaut */
+    max-width: 100%; /* active l'ellipsis */
+}

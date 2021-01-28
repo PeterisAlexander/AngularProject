@@ -1,0 +1,16 @@
+/* masque un élément */
+.hidden {
+    display: none !important;
+}
+
+.visibilityHidden {
+    visibility: hidden !important;
+}
+
+.inlineBlock {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}

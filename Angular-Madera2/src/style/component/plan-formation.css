@@ -1,0 +1,12 @@
+.planFormation_total {
+    background-color: var(--neutral6);
+    border-radius: 4px;
+    color: var(--neutral4);
+    padding: 5.5px var(--space4);
+    text-align: right;
+}
+
+.planFormation_total-dark {
+    background-color: var(--neutral4);
+    color: var(--gray2);
+}

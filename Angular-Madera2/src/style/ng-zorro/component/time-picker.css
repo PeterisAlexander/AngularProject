@@ -1,0 +1,11 @@
+/* Le time picker n'est pas conçus pour fonctionner dans un input-group
+    ce paliatif permet de gérer le cas ou il y a un addOn à droite et un addOn à gauche..*/
+.ant-input-group .ant-time-picker:not(:last-child) .ant-time-picker-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ant-input-group * + .ant-time-picker > .ant-time-picker-input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

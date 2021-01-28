@@ -1,8 +1,0 @@
-:host {
-    align-items: center;
-    color: var(--neutral4);
-    display: flex;
-    font-size: var(--text12);
-    line-height: var(--lineHeight12);
-    padding: 0 calc(var(--listHeaderPadding) / 2);
-}

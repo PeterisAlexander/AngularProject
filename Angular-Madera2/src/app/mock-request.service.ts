@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 // import { CategorieFormTypeEnum } from './business/materiel/component/categorie-form.model';
 // import { CategorieEntity } from './core/entity/materiel/categorie.entity';
 // import { MaterielEntity } from './core/entity/materiel/materiel.entity';
-// import { MockRequest } from './lib/mock-request/mock-request';
+import { MockRequest } from './lib/mock-request/mock-request';
 
 /**
  * Classe permettant de simuler des accès à la Web API

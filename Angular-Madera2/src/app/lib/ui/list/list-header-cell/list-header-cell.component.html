@@ -1,0 +1,11 @@
+<div fxFlex="1 1 auto" class="textEllipsis" [style.text-align]="textAlign">
+    <ng-container *ngIf="label">
+        <ng-container *ngIf="isString(label); else templatedLabelTpl">
+            {{ label }}
+        </ng-container>
+
+        <ng-template #templatedLabelTpl>
+            <ng-container *ngTemplateOutlet="label"></ng-container>
+        </ng-template>
+    </ng-container>
+</div>

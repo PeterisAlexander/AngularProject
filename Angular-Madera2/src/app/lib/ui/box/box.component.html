@@ -1,0 +1,14 @@
+<ng-container *ngIf="hasTitle">
+    <div class="box_header flexItemFixed" [style.background-color]="background">
+        <ng-content select="app-title"></ng-content>
+    </div>
+</ng-container>
+
+<div
+    class="box_content flexItemFluid"
+    [class.box_content-noHeader]="!hasTitle"
+    [style.padding]="padding"
+    [style.background-color]="background"
+>
+    <ng-content></ng-content>
+</div>

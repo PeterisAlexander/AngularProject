@@ -1,0 +1,32 @@
+:host {
+    display: block;
+}
+
+.flag_shape {
+    width: 16px;
+    height: 24px;
+    border-radius: 0 0 4px 4px;
+}
+
+.flag_content {
+    position: relative;
+}
+
+/* Gestion du positionnement dans une carte */
+:host-context(app-card) .flag_shape {
+    position: absolute;
+    left: 16px;
+    top: 0;
+}
+
+/* Gestion du positionnement dans une boite (app-box) */
+:host.flag-withBox {
+    position: relative;
+}
+
+:host.flag-withBox .flag_shape {
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(90deg) translateX(11px) translateY(-18px);
+    z-index: 0;
+}

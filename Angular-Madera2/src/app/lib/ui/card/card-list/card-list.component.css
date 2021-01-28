@@ -1,0 +1,11 @@
+:host {
+    display: block;
+}
+
+:host.cardList-multiColumns {
+    --cardListNbCards: 1;
+
+    display: grid;
+    gap: var(--space6);
+    grid-template-columns: repeat(var(--cardListNbCards), minmax(0, 1fr));
+}

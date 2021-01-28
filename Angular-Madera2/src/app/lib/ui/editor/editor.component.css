@@ -1,0 +1,41 @@
+:host {
+    display: block;
+    line-height: 1;
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+    margin: 0;
+}
+
+.ql-formats > button {
+    width: 24px;
+    padding: 3px;
+}
+
+/* Permet d'imiter l'input de Zorro à l'état désactivé */
+.editor_fakeInput {
+    background-color: var(--zorroInputDisabledBackground);
+    border: 1px solid var(--zorroBorderColor);
+    cursor: not-allowed;
+    border-radius: 4px;
+    padding: 7.5px 11px;
+}
+
+.editor_editorContent {
+    opacity: 0.5;
+}
+
+.editor_suggestion {
+    cursor: pointer;
+    font-size: var(--text12);
+    line-height: var(--text12LineHeight);
+    padding: var(--space1) var(--space3);
+}
+
+.editor_suggestion-active {
+    color: var(--primary1);
+}
+
+.editor_suggestion:hover {
+    background-color: var(--neutral5);
+}

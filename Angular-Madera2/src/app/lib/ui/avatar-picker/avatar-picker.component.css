@@ -1,0 +1,38 @@
+:host {
+    display: block;
+}
+
+.avatarPicker_container {
+    position: relative;
+}
+
+.avatarPicker_img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.avatarPicker_overlay {
+    border-radius: 50%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.avatarPicker_trashIcon {
+    color: var(--gray2);
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.avatarPicker_container:hover .avatarPicker_overlay {
+    background-color: var(--black1Faded65);
+}
+
+.avatarPicker_container:hover .avatarPicker_trashIcon {
+    opacity: 1;
+}

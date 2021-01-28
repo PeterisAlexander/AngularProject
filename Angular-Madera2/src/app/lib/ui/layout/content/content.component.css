@@ -1,0 +1,7 @@
+:host {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    /* nécessaire pour les ellipsis vu que l'on est dans un flex */
+    overflow-x: hidden;
+}

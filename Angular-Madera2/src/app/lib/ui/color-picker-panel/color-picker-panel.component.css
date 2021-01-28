@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container .line {
+    display: flex;
+}
+
+.container .line + .line {
+    margin-top: 16px;
+}
+
+.line > button {
+    border-radius: 50%;
+}
+
+.line > button + button {
+    margin-left: 16px;
+  }
+
+.line > button:hover {
+    opacity: 0.6;
+}
+
+.icon-check {
+    color: white;
+}

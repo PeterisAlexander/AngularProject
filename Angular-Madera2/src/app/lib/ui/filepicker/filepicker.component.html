@@ -1,0 +1,29 @@
+<input
+    #inputFile
+    [attr.accept]="accept"
+    [attr.name]="name"
+    [attr.enctype]="encType"
+    [multiple]="multiple"
+    (change)="handleChange($event)"
+    type="file"
+    class="hidden"
+/>
+
+<button
+    #buttonFile
+    type="button"
+    class="button flex flexColumn flexAlignCenter flexJustifyCenter"
+    [style.width.px]="width"
+    [style.height.px]="height"
+    [style.background-color]="backgroundColor"
+    [style.color]="fontColor"
+    nz-button
+    [nzType]="nzButtonType"
+    [nzShape]="nzButtonShape"
+    [disabled]="disabled"
+    (click)="handleClick()"
+    (blur)="handleBlur()"
+>
+    <i *ngIf="icon" nz-icon [nzType]="icon" [style.font-size.px]="iconSize"></i>
+    <span class="marginRight2s">{{ content }}</span>
+</button>

@@ -1,0 +1,52 @@
+<ejs-schedule
+    *ngIf="options"
+    #schedule
+    [allowDragAndDrop]="false"
+    [currentView]="options.calendarState.view"
+    [locale]="locale"
+    [eventSettings]="eventSettings"
+    [firstDayOfWeek]="firstDayOfTheWeek"
+    [height]="height | async"
+    [maxDate]="options.dateMax"
+    [minDate]="options.dateMin"
+    [selectedDate]="options.calendarState.date"
+    [showQuickInfo]="false"
+    [timeScale]="timeScale"
+    [workDays]="workDays"
+    (dataBound)="onDataBound()"
+    (eventClick)="eventClick($event.event)"
+    (eventRendered)="onEventRendered($event)"
+    (navigating)="navigating($event)"
+    (renderCell)="renderCell($event)"
+    (select)="select($event)"
+    ><e-views>
+        <e-view option="Day">
+            <ng-template #eventTemplate let-data>
+                <ng-container
+                    *ngTemplateOutlet="weekTpl; context: { $implicit: data }"
+                ></ng-container>
+            </ng-template>
+        </e-view>
+        <e-view option="Week">
+            <ng-template #eventTemplate let-data>
+                <ng-container
+                    *ngTemplateOutlet="weekTpl; context: { $implicit: data }"
+                ></ng-container>
+            </ng-template>
+        </e-view>
+        <e-view option="WorkWeek">
+            <ng-template #eventTemplate let-data>
+                <ng-container
+                    *ngTemplateOutlet="weekTpl; context: { $implicit: data }"
+                ></ng-container>
+            </ng-template>
+        </e-view>
+        <e-view option="Month">
+            <ng-template #eventTemplate let-data>
+                <ng-container
+                    *ngTemplateOutlet="monthTpl; context: { $implicit: data }"
+                ></ng-container>
+            </ng-template>
+        </e-view>
+    </e-views>
+</ejs-schedule>

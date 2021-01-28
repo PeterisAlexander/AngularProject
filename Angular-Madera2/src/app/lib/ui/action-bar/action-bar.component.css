@@ -1,0 +1,21 @@
+:host {
+    display: block;
+}
+
+:host:not(.actionBar-inDrawer) {
+    --actionBarHeight: 64px;
+
+    height: var(--actionBarHeight);
+}
+
+:host:not(.actionBar-inDrawer) .actionBar_body {
+    background-color: var(--gray2Faded90);
+    border-top: var(--gray1) 1px;
+    bottom: 0;
+    box-shadow: 0 0 8px var(--black1Faded15);
+    height: var(--actionBarHeight);
+    padding: 0 var(--contentPaddingX);
+    position: fixed;
+    right: 0;
+    z-index: var(--zIndexactionBar);
+}

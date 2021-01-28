@@ -1,0 +1,14 @@
+<ng-container *ngIf="(control && control.invalid && control.dirty) || errors">
+    <div
+        *ngFor="let error of controlErrors; trackBy: trackByError"
+        class="textError"
+    >
+        <ng-container *ngIf="error[1] != null">
+            {{
+                isFunction(customErrors[error[0]])
+                    ? customErrors[error[0]](error[1])
+                    : customErrors[error[0]]
+            }}
+        </ng-container>
+    </div>
+</ng-container>

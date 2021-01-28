@@ -1,0 +1,14 @@
+<ng-container *ngIf="!inDrawer; then bodyTpl"></ng-container>
+
+<ng-template #bodyTpl>
+    <div
+        fxFlex
+        fxLayoutAlign="start center"
+        class="actionBar_body"
+        [ngClass]="bodyClasses"
+        [ngStyle]="bodyStyles"
+        [style.left.px]="leftPosition"
+    >
+        <ng-content></ng-content>
+    </div>
+</ng-template>

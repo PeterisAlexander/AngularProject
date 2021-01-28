@@ -1,0 +1,17 @@
+<app-collapsable-header
+    #handler
+    [(collapsed)]="collapsed"
+    iconSide="right"
+    iconColor="var(--neutral4)"
+    padding="0 0 var(--space2) 0"
+    [withBorder]="true"
+    class="text18"
+>
+    {{ label }}
+</app-collapsable-header>
+
+<app-collapsable [handler]="handler">
+    <div class="formGroup_content">
+        <ng-content></ng-content>
+    </div>
+</app-collapsable>

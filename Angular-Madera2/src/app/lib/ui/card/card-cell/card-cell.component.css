@@ -1,0 +1,82 @@
+:host {
+    display: block;
+    margin-top: var(--space2);
+    min-height: var(--text14LineHeight);
+}
+
+.cardCell_inner {
+    align-items: var(--cardCellVerticalAlign);
+    display: flex;
+    height: 100%;
+}
+
+.cardCell_label {
+    align-items: center;
+    color: var(--neutral4);
+    display: flex;
+    font-size: var(--text12);
+    flex: 0 0 auto;
+    line-height: var(--text12LineHeight);
+}
+
+:host-context(app-card:not(.card-withTopLabel)) .cardCell_label {
+    margin-right: var(--space2);
+}
+
+.cardCell_content {
+    flex: 1 1 auto;
+    /* == Obligatoire à cause d'un bug sur les flex : https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored == */
+    min-width: 0;
+}
+
+/* == Déclinaisons liées au type == */
+:host-context(app-card).cardCell-title .cardCell_content {
+    font-weight: 600;
+}
+
+:host-context(app-card:not(.card-tabular)).cardCell-title .cardCell_content {
+    font-size: var(--text16);
+    line-height: var(--text16LineHeight);
+}
+
+:host.cardCell-subTitle {
+    margin-top: 0;
+}
+
+:host.cardCell-subTitle .cardCell_content {
+    color: var(--neutral4);
+}
+
+/* == Déclinaison avec le libellé sur une seule ligne et le contenu en dessous == */
+:host-context(.card-withTopLabel) .cardCell_inner {
+    flex-wrap: wrap;
+}
+
+:host-context(.card-withTopLabel) .cardCell_label {
+    flex: 1 1 100%;
+}
+
+/* == Déclinaison contenu cliquable == */
+:host-context(.card-contentClickable).cardCell-title {
+    transition: color 0.3s ease;
+}
+
+:host-context(.card-contentClickable a:hover).cardCell-title,
+:host-context(.card-contentClickable a:focus).cardCell-title {
+    color: var(--linkPrimaryHoverColor);
+}
+
+/* == Déclinaison tabulaire (simili ligne de tableau) == */
+:host-context(.card-tabular) {
+    margin-top: 0;
+}
+
+:host-context(.card-tabular) .cardCell_inner {
+    background-color: var(--cardCellBackgroundColor);
+    flex: 1 1 auto;
+    padding: var(--cardPadding) calc(var(--cardPadding) / 2);
+}
+
+:host-context(.card-tabular) .cardCell_label {
+    display: none;
+}

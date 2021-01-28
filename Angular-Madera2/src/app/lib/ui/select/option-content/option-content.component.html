@@ -1,0 +1,48 @@
+<ng-container *ngIf="isOneColumn; else multiColumnsTpl">
+    <div
+        nz-tooltip
+        [nzTooltipPlacement]="tooltipPlacement"
+        [nzTooltipTitle]="contentStr"
+        [class.textEllipsis]="!template"
+    >
+        <ng-container *ngIf="template; else stringContentTpl">
+            <ng-container
+                *ngTemplateOutlet="template; context: templateData"
+            ></ng-container>
+        </ng-container>
+        <ng-template #stringContentTpl>
+            {{ contentStr }}
+        </ng-template>
+    </div>
+</ng-container>
+
+<ng-template #multiColumnsTpl>
+    <div
+        [gdColumns]="multiColumnsGrid"
+        gdGap="var(--space2)"
+        nz-tooltip
+        [nzTooltipPlacement]="tooltipPlacement"
+        [nzTooltipTitle]="tooltipMultiColumnsTpl"
+    >
+        <div
+            *ngFor="let column of content"
+            [style.padding-left.px]="
+                column.indent == null ? 0 : column.indent * 16
+            "
+            [style.text-align]="column.align"
+            class="textEllipsis optionContent_column"
+        >
+            {{ column.label }}
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #tooltipMultiColumnsTpl>
+    <div
+        *ngFor="let column of content"
+        class="optionContent_tooltipRow"
+        [class.hidden]="column.label == null"
+    >
+        {{ column.label }}
+    </div>
+</ng-template>

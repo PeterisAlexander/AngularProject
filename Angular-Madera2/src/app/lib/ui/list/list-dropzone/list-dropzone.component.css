@@ -1,0 +1,22 @@
+:host {
+    --listDropzoneOverlap: 4px;
+
+    display: block;
+    margin: calc(var(--listDropzoneOverlap) * -1) 0
+        calc(var(--listDropzoneOverlap) * -1) calc(var(--space6) * -1);
+    min-height: var(--space2);
+    padding-left: var(--space6);
+    position: relative;
+    z-index: 1;
+}
+
+.listDropzone_inner {
+    height: 0;
+    transition: height 0.125s ease;
+}
+
+:host.dropzone-hover.dropTree_dropzone-valid .listDropzone_inner {
+    background-color: var(--neutral6);
+    margin-top: var(--listDropzoneOverlap);
+    margin-bottom: var(--listDropzoneOverlap);
+}

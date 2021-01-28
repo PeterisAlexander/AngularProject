@@ -1,0 +1,18 @@
+<div class="cardCell_inner">
+    <div *ngIf="label" class="cardCell_label textEllipsis">
+        <ng-container *ngIf="isString(label); else templatedLabelTpl">
+            {{ label }}
+        </ng-container>
+
+        <ng-template #templatedLabelTpl>
+            <ng-container *ngTemplateOutlet="label"></ng-container>
+        </ng-template>
+    </div>
+    <div
+        class="cardCell_content"
+        [class.textEllipsis]="withEllipsis"
+        [style.text-align]="textAlign"
+    >
+        <ng-content></ng-content>
+    </div>
+</div>

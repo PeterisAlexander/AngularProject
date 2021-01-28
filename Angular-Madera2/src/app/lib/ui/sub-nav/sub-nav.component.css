@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    margin: var(--space2) 0 calc(-1 * var(--space2)) 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.subNav_previous,
+.subNav_next {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    margin-bottom: var(--space2);
+    width: var(--space6);
+    visibility: hidden;
+}
+
+:host.subNav-controlsShown .subNav_previous,
+:host.subNav-controlsShown .subNav_next {
+    visibility: visible;
+}
+
+.subNav_items {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+}

@@ -1,0 +1,7 @@
+:host {
+    display: block;
+}
+
+.optionContent_tooltipRow + .optionContent_tooltipRow {
+    margin-top: var(--space2);
+}

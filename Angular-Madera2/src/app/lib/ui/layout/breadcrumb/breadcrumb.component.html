@@ -1,0 +1,19 @@
+<nz-breadcrumb nzSeparator="\">
+    <nz-breadcrumb-item>
+        <a routerLink="/">
+            <i nz-icon nzType="picto:home" [style.font-size.px]="11"></i>
+        </a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item *ngFor="let item of items | async; let last = last">
+        <a
+            *ngIf="!last && item.link != null; else noLinkLabelTpl"
+            [routerLink]="item.link"
+        >
+            {{ getEllipsisLabel(item.label) }}
+        </a>
+
+        <ng-template #noLinkLabelTpl>
+            {{ getEllipsisLabel(item.label) }}
+        </ng-template>
+    </nz-breadcrumb-item>
+</nz-breadcrumb>

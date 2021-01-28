@@ -1,0 +1,100 @@
+<nz-button-group
+    *ngIf="layout.isDesktop && extraButtonList?.length > 0; else addButtonTpl"
+>
+    <ng-container *ngTemplateOutlet="addButtonTpl"></ng-container>
+
+    <button
+        nz-button
+        nz-dropdown
+        nzType="primary"
+        nzTrigger="click"
+        type="button"
+        [nzDropdownMenu]="menu"
+    >
+        <i nz-icon nzType="down" nzTheme="outline"> </i>
+    </button>
+</nz-button-group>
+
+<ng-template #addButtonTpl>
+    <button
+        nz-button
+        nzType="primary"
+        [nzSize]="layout.isDesktop ? 'default' : 'large'"
+        [nzShape]="layout.isDesktop ? null : 'circle'"
+        (click)="
+            layout.isMobile && extraButtonList?.length > 0
+                ? drawer.open()
+                : add.emit()
+        "
+        type="button"
+        class="listAdd_button"
+    >
+        <i
+            nz-icon
+            [nzType]="layout.isDesktop ? 'picto:plus-circle' : 'picto:plus'"
+        ></i>
+        {{ layout.isDesktop ? label : null }}
+    </button>
+</ng-template>
+
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+        <li
+            nz-menu-item
+            *ngFor="let extraButton of extraButtonList"
+            (click)="extraButton.action()"
+        >
+            {{ extraButton.label }}
+        </li>
+    </ul>
+</nz-dropdown-menu>
+
+<nz-drawer
+    #drawer
+    [nzHeight]="drawerHeight"
+    [nzBodyStyle]="{ padding: 0 }"
+    [nzClosable]="false"
+    nzPlacement="bottom"
+    (nzOnClose)="drawer.close()"
+>
+    <ng-template nzDrawerContent>
+        <button
+            nzBlock
+            nzType="link"
+            type="button"
+            nz-button
+            class="listAdd_buttonColor"
+            nzSize="large"
+            (click)="add.emit()"
+        >
+            {{ label }}
+        </button>
+
+        <nz-divider class="marginBottom0 marginTop0"></nz-divider>
+
+        <ng-container *ngFor="let extraButton of extraButtonList">
+            <button
+                nzBlock
+                nzType="link"
+                type="button"
+                nz-button
+                (click)="extraButton.action()"
+                nzSize="large"
+                class="listAdd_buttonColor"
+            >
+                {{ extraButton.label }}
+            </button>
+            <nz-divider class="marginBottom0 marginTop0"></nz-divider>
+        </ng-container>
+
+        <button
+            nzBlock
+            nzType="link"
+            nz-button
+            (click)="drawer.close()"
+            nzSize="large"
+        >
+            Annuler
+        </button>
+    </ng-template>
+</nz-drawer>

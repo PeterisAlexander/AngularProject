@@ -1,0 +1,14 @@
+{
+    "adminstrationWebApiUrl": "https://webapi-arya-local.ymag.fr",
+    "portalAppUrl": "https://arya-local.ymag.fr",
+    "openId": {
+        "authority": "https://identity-local.ymag.fr"
+    },
+    "logLevel": 0,
+    "msalConfig": {
+        "auth": {
+            "clientId": "b8b33e8a-0536-48f4-901b-9424588dfad9",
+            "redirectUri": "https://westeros-local.ymag.fr:4200/msal/auth-callback"
+        }
+    }
+}

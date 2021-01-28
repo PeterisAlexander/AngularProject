@@ -1,0 +1,25 @@
+:host {
+    display: block;
+    padding: 0 var(--space4);
+}
+
+.legend_title {
+    font-weight: 700;
+    padding-left: var(--space2);
+    padding-bottom: var(--space1);
+}
+
+.legend_color {
+    width: var(--space4);
+    height: var(--space4);
+    border-radius: 3px;
+    margin-right: var(--space1);
+}
+
+.legend_element {
+    padding: var(--space2);
+}
+
+.legend_group {
+    background-color: var(--black1Faded5);
+}

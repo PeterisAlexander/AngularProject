@@ -1,0 +1,15 @@
+:host {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+}
+
+/* == Ajout d'une bordure basse == */
+:host.collapsableHeader-withBorder {
+    box-shadow: inset 0 -1px 0 var(--neutral5);
+}
+
+/* == Ajout d'un margin au composant utilisé dans un formulaire == */
+:host-context(app-form-group) {
+    margin-bottom: var(--space4);
+}

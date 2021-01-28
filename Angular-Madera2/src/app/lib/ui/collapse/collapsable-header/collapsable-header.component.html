@@ -1,0 +1,37 @@
+<div
+    *ngIf="isIconLeft"
+    fxLayout
+    fxLayoutAlign="center start"
+    fxFlex="0 0 auto"
+    [style.width.px]="24"
+    class="cursorPointer"
+>
+    <i
+        nz-icon
+        nzType="picto:angle-down"
+        [style.font-size.px]="24"
+        [style.color]="iconColor"
+        [class.rotate270]="collapsed"
+    ></i>
+</div>
+
+<div fxFlex="1 1 auto" class="textEllipsis textSemiBold marginRight2s">
+    <ng-content></ng-content>
+</div>
+
+<div
+    *ngIf="!isIconLeft"
+    fxLayout
+    fxLayoutAlign="center"
+    fxFlex="0 0 auto"
+    [style.width.px]="24"
+    class="cursorPointer marginRight2s"
+>
+    <i
+        nz-icon
+        nzType="picto:angle-down"
+        [style.font-size.px]="24"
+        [style.color]="iconColor"
+        [class.rotate180]="!collapsed"
+    ></i>
+</div>

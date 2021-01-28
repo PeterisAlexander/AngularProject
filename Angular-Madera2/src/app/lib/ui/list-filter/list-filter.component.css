@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+}
+
+.listFilter_searchGroup {
+    flex: 1 1 auto;
+    max-width: 518px; /* valeur maquette */
+}
+
+.listFilter_filterButton {
+    flex: 0 0 auto;
+}

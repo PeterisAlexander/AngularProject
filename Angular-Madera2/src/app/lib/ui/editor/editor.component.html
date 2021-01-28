@@ -1,0 +1,181 @@
+<quill-editor
+    *ngIf="configInternal && !disabled; else disabledTpl"
+    #quillEditor
+    placeholder="Entrez votre texte ici..."
+    [sanitize]="false"
+    [styles]="editorStyle"
+    [modules]="modules"
+    [ngModel]="value"
+    (ngModelChange)="changeValue($event)"
+    (onEditorCreated)="quillEditorCreated($event, quillEditor)"
+    (onBlur)="onTouched()"
+>
+    <div quill-editor-toolbar>
+        <span class="ql-formats">
+            <select
+                *ngIf="configInternal.header"
+                title="Titre"
+                class="ql-header"
+            >
+                <option value="1">Titre</option>
+                <option value="2">Sous-titre</option>
+                <option selected>Normal</option>
+            </select>
+
+            <button
+                *ngIf="configInternal.bold"
+                title="Gras"
+                class="ql-bold"
+                type="button"
+            ></button>
+
+            <button
+                *ngIf="configInternal.italic"
+                title="Italique"
+                class="ql-italic"
+                type="button"
+            ></button>
+
+            <button
+                *ngIf="configInternal.underline"
+                title="Souligner"
+                class="ql-underline"
+                type="button"
+            ></button>
+
+            <select
+                *ngIf="configInternal.textColor"
+                title="Couleur du texte"
+                class="ql-color"
+            ></select>
+
+            <select
+                *ngIf="configInternal.colorBackgroundText"
+                title="Couleur de fond du texte"
+                class="ql-background"
+            ></select>
+
+            <button
+                *ngIf="configInternal.listOrdered"
+                value="ordered"
+                title="Liste ordonnée"
+                class="ql-list"
+                type="button"
+            ></button>
+
+            <button
+                *ngIf="configInternal.listBullet"
+                value="bullet"
+                title="Liste à puce"
+                class="ql-list"
+                type="button"
+            ></button>
+
+            <select
+                *ngIf="configInternal.textFont"
+                title="Police"
+                class="ql-font"
+            >
+                <option value="Open Sans" selected>Open Sans</option>
+            </select>
+
+            <select
+                *ngIf="configInternal.textAlign"
+                title="Alignement du texte"
+                class="ql-align"
+            >
+                <option selected></option>
+                <option value="center"></option>
+                <option value="right"></option>
+                <option value="justify"></option>
+            </select>
+
+            <button
+                *ngIf="configInternal.textIndent"
+                value="+1"
+                title="Indenter"
+                class="ql-indent"
+                type="button"
+            ></button>
+
+            <button
+                *ngIf="configInternal.textIndent"
+                value="-1"
+                title="Désindenter"
+                class="ql-indent"
+                type="button"
+            ></button>
+
+            <button
+                *ngIf="configInternal.clean"
+                title="Déformater le texte"
+                class="ql-clean"
+                type="button"
+            ></button>
+
+            <button
+                *ngIf="configInternal.image"
+                title="ajouter une image"
+                class="ql-image"
+                type="button"
+            ></button>
+
+            <ng-container *ngIf="extra">
+                <ng-container *ngTemplateOutlet="extra"></ng-container>
+            </ng-container>
+        </span>
+    </div>
+
+    <ng-container
+        *ngTemplateOutlet="
+            suggestionsTemplate;
+            context: { $implicit: showSugestions | async }
+        "
+    ></ng-container>
+</quill-editor>
+
+<ng-template #suggestionsTemplate let-position>
+    <div
+        quill-editor-content
+        nz-popover
+        [nzPopoverTrigger]="false"
+        [nzPopoverVisible]="
+            position.show &&
+            (!(autocompleteLoader.isEmpty | async) ||
+                (autocompleteLoader.isLoading | async))
+        "
+        [nzPopoverContent]="suggestionContentTemplate"
+        [nzPopoverOverlayStyle]="{
+            left: position.left + 'px',
+            top: position.top + 'px'
+        }"
+        nzPopoverPlacement="bottomLeft"
+    ></div>
+    <ng-template #suggestionContentTemplate>
+        <div *ngIf="autocompleteLoader.isLoading | async">
+            <nz-spin></nz-spin>
+        </div>
+        <div fxLayout="column">
+            <div
+                *ngFor="
+                    let suggestion of autocompleteLoader.data | async;
+                    trackBy: trackMergeField
+                "
+                class="editor_suggestion"
+                [class.editor_suggestion-active]="suggestion.active"
+                (click)="autocomplete(suggestion)"
+            >
+                {{ suggestion.key }}
+            </div>
+        </div>
+    </ng-template>
+</ng-template>
+
+<ng-template #disabledTpl>
+    <div *ngIf="disabled" class="editor_fakeInput">
+        <app-editor-content
+            [content]="value"
+            class="editor_editorContent"
+        ></app-editor-content>
+    </div>
+</ng-template>

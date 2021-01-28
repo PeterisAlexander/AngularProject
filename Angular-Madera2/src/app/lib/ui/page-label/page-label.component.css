@@ -1,0 +1,91 @@
+:host {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.pageLabel_bookmark {
+    color: var(--neutral4);
+    flex: 0 0 auto;
+    font-size: 16px;
+    margin-right: var(--space2);
+}
+
+.pageLabel_bookmark-active {
+    color: var(--yellow1);
+}
+
+.pageLabel_lines {
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.pageLabel_line1 {
+    color: var(--fontColorBase);
+    font-size: var(--text18);
+    font-weight: 600;
+    line-height: var(--text18LineHeight);
+}
+
+.pageLabel_extra {
+    color: var(--neutral4);
+    font-size: var(--text14);
+    font-weight: normal;
+    line-height: var(--text14LineHeight);
+}
+
+.pageLabel_line2 {
+    color: var(--neutral4);
+    font-size: var(--text12);
+    font-weight: 600;
+    line-height: var(--text12LineHeight);
+}
+
+@media screen and (min-width: 1280px) {
+    .pageLabel_line1 {
+        font-size: var(--text24);
+        line-height: var(--text24LineHeight);
+    }
+
+    .pageLabel_lines-oneLine .pageLabel_line1 {
+        font-size: var(--text32);
+        line-height: var(--text32LineHeight);
+    }
+
+    .pageLabel_extra {
+        font-size: var(--text18);
+        line-height: var(--text18LineHeight);
+    }
+
+    .pageLabel_line2 {
+        font-size: var(--text14);
+        line-height: var(--text14LineHeight);
+    }
+}
+
+/* == Déclinaison lorsque le composant est utilisé dans l'entête == */
+:host-context(app-header) .pageLabel_line1 {
+    font-size: var(--text16);
+    line-height: var(--text16LineHeight);
+}
+
+:host-context(app-header) .pageLabel_extra {
+    font-size: var(--text14);
+    line-height: var(--text14LineHeight);
+}
+
+/* == Déclinaison lorsque le composant est utilisé dans le page title == */
+:host-context(app-page-header) {
+    flex: 1 1 auto !important;
+    overflow: hidden;
+}
+
+:host-context(.pageHeader-fixed) .pageLabel_line1 {
+    font-size: var(--text18);
+    line-height: var(--text18LineHeight);
+}
+
+:host-context(.pageHeader-fixed) .pageLabel_line2 {
+    font-size: var(--text12);
+    line-height: var(--text12LineHeight);
+}

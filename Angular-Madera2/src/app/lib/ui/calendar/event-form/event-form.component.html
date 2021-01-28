@@ -1,0 +1,73 @@
+<form
+    *ngIf="form; else loadingTemplate"
+    nz-form
+    nzLayout="vertical"
+    nzNoColon
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    appForm
+>
+    <div
+        class="width100pct"
+        formGroupName="dates"
+        fxLayout
+        fxLayout.lt-lg="column"
+        fxLayoutGap="var(--space2)"
+    >
+        <nz-form-item fxFlex="1 0 auto">
+            <nz-form-label>Date</nz-form-label>
+            <nz-form-control>
+                <nz-date-picker
+                    appPickerFormat
+                    class="width100pct"
+                    formControlName="dateStart"
+                    [nzAllowClear]="false"
+                ></nz-date-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item fxFlex="0 0">
+            <nz-form-label>Heure début</nz-form-label>
+            <nz-form-control>
+                <nz-time-picker
+                    formControlName="dateStart"
+                    [nzAllowEmpty]="false"
+                    nzFormat="HH:mm"
+                ></nz-time-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item fxFlex="0 0">
+            <nz-form-label>Heure fin</nz-form-label>
+            <nz-form-control>
+                <nz-time-picker
+                    formControlName="dateEnd"
+                    [nzAllowEmpty]="false"
+                    nzFormat="HH:mm"
+                ></nz-time-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item fxFlex="1 1">
+            <nz-form-label>Durée</nz-form-label>
+            <nz-form-control>
+                <div class="evenementForm_duree">
+                    {{ duree | appTime: '-':'-' }}
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+    </div>
+
+    <app-input-error
+        [control]="form.controls.dates"
+        class="marginBottom6s"
+    ></app-input-error>
+
+    <nz-form-item>
+        <nz-form-label>Description</nz-form-label>
+        <nz-form-control>
+            <app-editor formControlName="description"></app-editor>
+        </nz-form-control>
+    </nz-form-item>
+</form>
+
+<ng-template #loadingTemplate>
+    <nz-spin></nz-spin>
+</ng-template>

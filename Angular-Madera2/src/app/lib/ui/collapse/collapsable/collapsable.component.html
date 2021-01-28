@@ -1,0 +1,7 @@
+<div
+    [@expend]="!collapsed"
+    (@expend.start)="isAnimating = true"
+    (@expend.done)="isAnimating = false"
+>
+    <ng-content></ng-content>
+</div>

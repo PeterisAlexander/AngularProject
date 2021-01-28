@@ -1,0 +1,12 @@
+<a
+    *ngIf="redirectTo; else contentTpl"
+    [routerLink]="redirectTo.path"
+    [queryParams]="redirectTo.queryParams"
+    class="subNavItem_link"
+>
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+</a>
+
+<ng-template #contentTpl>
+    <ng-content></ng-content>
+</ng-template>

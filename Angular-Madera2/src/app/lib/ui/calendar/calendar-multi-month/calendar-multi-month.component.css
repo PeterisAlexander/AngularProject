@@ -1,0 +1,43 @@
+:host {
+    --calendarMultiMonthNbColonne: 1;
+
+    display: grid;
+    gap: var(--space6);
+    grid-template-columns: repeat(var(--calendarMultiMonthNbColonne), 1fr);
+}
+
+@media screen and (min-width: 600px) {
+    :host {
+        --calendarMultiMonthNbColonne: 2;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    :host {
+        --calendarMultiMonthNbColonne: 3;
+    }
+
+    :host.calendarMultiMonth-compact {
+        --calendarMultiMonthNbColonne: 2;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    :host {
+        --calendarMultiMonthNbColonne: 4;
+    }
+
+    :host.calendarMultiMonth-compact {
+        --calendarMultiMonthNbColonne: 3;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    :host {
+        --calendarMultiMonthNbColonne: 6;
+    }
+
+    :host.calendarMultiMonth-compact {
+        --calendarMultiMonthNbColonne: 5;
+    }
+}

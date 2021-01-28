@@ -1,0 +1,42 @@
+:host {
+    align-items: center;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 22px;
+    padding: var(--space5);
+    text-align: center;
+    transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+:host.tile-hasAction:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.tile_number {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.tile_icon {
+    font-size: 24px;
+}
+
+/* espacements et taille dans une liste de tuiles */
+:host-context(app-tile-list) {
+    flex: 1 1 auto;
+    margin-bottom: var(--tileListGutter);
+}
+
+@media screen and (min-width: 1280px) {
+    /* espacements et taille dans une liste de tuiles */
+    :host-context(app-tile-list) {
+        flex: 0 0 auto;
+        margin-right: var(--tileListGutter);
+        width: 225px; /* fixée en dur pour l'instant, valeur d'après maquette */
+    }
+}

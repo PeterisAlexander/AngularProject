@@ -1,0 +1,32 @@
+<div class="header_navToggle" (click)="navClick.emit()">
+    <i nz-icon nzType="picto:bars" style="font-size: 18px"></i>
+</div>
+
+<ng-container
+    *ngIf="
+        layout.isFixedHeader && layout.showPageHeaderInHeader;
+        else defaultHeaderTpl
+    "
+>
+    <div class="header_pageContext textEllipsis">
+        <ng-container
+            *ngIf="
+                isString(layout.pageHeader) || layout.pageHeader == null;
+                else layout.pageHeader
+            "
+        >
+            {{ layout.pageHeader }}
+        </ng-container>
+    </div>
+</ng-container>
+
+<ng-template #defaultHeaderTpl>
+    <div class="header_pageContext textEllipsis">
+        <ng-container *ngIf="!layout.isFixedHeader">
+            <app-breadcrumb> </app-breadcrumb>
+        </ng-container>
+    </div>
+    <ng-container *ngIf="extra">
+        <ng-container *ngTemplateOutlet="extra"></ng-container>
+    </ng-container>
+</ng-template>

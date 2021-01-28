@@ -1,0 +1,6 @@
+<div class="title flexItemFluid textEllipsis" [ngClass]="titleClasses">
+    <ng-content></ng-content>
+</div>
+<div *ngIf="extra" class="flexItemFixed">
+    <ng-container *ngTemplateOutlet="extra"></ng-container>
+</div>

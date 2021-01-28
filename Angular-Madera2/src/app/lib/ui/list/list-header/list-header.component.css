@@ -1,0 +1,12 @@
+:host {
+    display: grid;
+    padding: var(--space2) 0;
+}
+
+/* == Déclinaison dans une liste de cartes (fausse bordure) == */
+:host-context(app-box) {
+    background-color: var(--gray2);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px var(--neutral3Faded8);
+    margin-bottom: 1px;
+}

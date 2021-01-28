@@ -1,0 +1,25 @@
+.pictoTimes {
+    font-size: 8px;
+    color: hsl(0, 0%, 35%);
+}
+
+.colorPreview {
+    border: 1px solid var(--zorroBorderColor);
+    border-radius: 10%;
+    height: 32px;
+    background-color: var(--gray2);
+}
+
+.colorPreview button + button {
+    transition: none;
+}
+
+.coloredCube {
+    width: 16px;
+    height: 16px;
+}
+
+.boutonColorPicker {
+    width: 32px;
+    height: 32px;
+}

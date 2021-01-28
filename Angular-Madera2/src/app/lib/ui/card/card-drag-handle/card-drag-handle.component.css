@@ -1,0 +1,24 @@
+:host {
+    --cardDragHandle: 24px;
+
+    align-items: center;
+    display: inline-flex;
+    height: var(--cardDragHandle);
+    justify-content: center;
+    width: var(--cardDragHandle);
+}
+
+.cardDragHandle_icon {
+    color: var(--neutral4Faded50);
+    cursor: move;
+}
+
+:host-context(app-card) {
+    --cardDragHandleLeft: calc(
+        calc(var(--cardPaddingLeft) - var(--cardDragHandle)) / 2
+    );
+
+    left: calc(var(--cardIndent) + var(--cardDragHandleLeft));
+    position: absolute;
+    top: calc(50% - calc(var(--cardDragHandle) / 2));
+}

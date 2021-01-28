@@ -1,7 +1,5 @@
-@import './core/core.css';
-@import './component/component.css';
-@import './ng-zorro/ng-zorro.css';
-@import './ngx-charts/ngx-charts.css';
-@import './quill/quill.css';
-@import './syncfusion-schedule/syncfusion-schedule.css';
-@import './utility/utility.css';
+@import "./core/core.css";
+@import "./component/component.css";
+@import "./ngx-charts/ngx-charts.css";
+@import "./quill/quill.css";
+@import "./utility/utility.css";

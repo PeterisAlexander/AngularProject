@@ -1,0 +1,5 @@
+/* Pour limiter l'affichage du drawer à la taille de l'écran
+    et ainsi le faire fonctionner en mode mobile */
+.ant-drawer-content-wrapper {
+    max-width: 100vw;
+}

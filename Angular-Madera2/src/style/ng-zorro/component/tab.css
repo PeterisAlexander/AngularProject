@@ -1,0 +1,57 @@
+/* Surcharge des tabs pour l'édition du devis, très très spécifique */
+app-devis-edit-dest .ant-tabs-card .ant-tabs-content {
+    margin-top: -16px;
+}
+
+app-devis-edit-dest .ant-tabs-card .ant-tabs-content .ant-tabs-tabpane {
+    background: var(--gray2);
+    padding: var(--space6);
+}
+
+app-devis-edit-dest .ant-tabs-card .ant-tabs-bar {
+    border-color: var(--gray2);
+}
+
+app-devis-edit-dest .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab,
+app-devis-edit-dest
+    .ant-tabs.ant-tabs-card
+    .ant-tabs-card-bar.ant-tabs-left-bar
+    .ant-tabs-tab {
+    background: transparent;
+    border-color: transparent;
+}
+
+app-devis-edit-dest
+    .ant-tabs.ant-tabs-card
+    .ant-tabs-card-bar
+    .ant-tabs-tab.ant-tabs-tab-active {
+    background: var(--gray2);
+    border-color: var(--gray2);
+}
+
+@media screen and (min-width: 1280px) {
+    app-devis-edit-dest .ant-tabs-left-content {
+        padding-left: 0 !important;
+        border-left: 0 !important;
+    }
+
+    app-devis-edit-dest .ant-tabs-left-content,
+    app-devis-edit-dest .ant-tabs-content,
+    app-devis-edit-dest .ant-tabs-tab-active {
+        box-shadow: 0 0 8px var(--black1Faded4) !important;
+    }
+
+    app-devis-edit-dest .ant-tabs-card .ant-tabs-content .ant-tabs-tabpane {
+        padding: var(--space4);
+    }
+}
+
+/* quand un appTabset est l'enfant immediat d'un app-content, on l'ajuste aux bords */
+app-content > .tabset {
+    margin: calc(-1 * var(--contentPaddingX));
+}
+
+app-content > .tabset .ant-tabs-tabpane {
+    padding-left: var(--contentPaddingX);
+    padding-right: var(--contentPaddingX);
+}

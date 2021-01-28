@@ -1,0 +1,15 @@
+.cursorNotAllowed {
+    cursor: not-allowed !important;
+}
+
+.cursorMove {
+    cursor: move !important;
+}
+
+.cursorPointer {
+    cursor: pointer !important;
+}
+
+.cursorDefault {
+    cursor: default !important;
+}

@@ -1,0 +1,99 @@
+/* == Paddings top == */
+.paddingTop1s {
+    padding-top: var(--space1) !important;
+}
+
+.paddingTop2s {
+    padding-top: var(--space2) !important;
+}
+
+.paddingTop3s {
+    padding-top: var(--space3) !important;
+}
+
+.paddingTop4s {
+    padding-top: var(--space4) !important;
+}
+
+.paddingTop5s {
+    padding-top: var(--space5) !important;
+}
+
+.paddingTop6s {
+    padding-top: var(--space6) !important;
+}
+
+/* == Paddings right == */
+.paddingRight1s {
+    padding-right: var(--space1) !important;
+}
+
+.paddingRight2s {
+    padding-right: var(--space2) !important;
+}
+
+.paddingRight3s {
+    padding-right: var(--space3) !important;
+}
+
+.paddingRight4s {
+    padding-right: var(--space4) !important;
+}
+
+.paddingRight5s {
+    padding-right: var(--space5) !important;
+}
+
+.paddingRight6s {
+    padding-right: var(--space6) !important;
+}
+
+/* == Paddings bottom == */
+.paddingBottom1s {
+    padding-bottom: var(--space1) !important;
+}
+
+.paddingBottom2s {
+    padding-bottom: var(--space2) !important;
+}
+
+.paddingBottom3s {
+    padding-bottom: var(--space3) !important;
+}
+
+.paddingBottom4s {
+    padding-bottom: var(--space4) !important;
+}
+
+.paddingBottom5s {
+    padding-bottom: var(--space5) !important;
+}
+
+.paddingBottom6s {
+    padding-bottom: var(--space6) !important;
+}
+
+/* == Paddings left == */
+.paddingLeft1s {
+    padding-left: var(--space1) !important;
+}
+
+.paddingLeft2s {
+    padding-left: var(--space2) !important;
+}
+
+.paddingLeft3s {
+    padding-left: var(--space3) !important;
+}
+
+.paddingLeft4s {
+    padding-left: var(--space4) !important;
+}
+
+.paddingLeft5s {
+    padding-left: var(--space5) !important;
+}
+
+.paddingLeft6s {
+    padding-left: var(--space6) !important;
+}

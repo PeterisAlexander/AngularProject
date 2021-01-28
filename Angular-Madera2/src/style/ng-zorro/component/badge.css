@@ -1,0 +1,14 @@
+/* Fait en sorte que le contenu des badges du select multiple s'affichent correctements */
+.ant-select-selection__choice .ant-badge {
+    vertical-align: top !important;
+}
+
+.ant-select-selection__choice .ant-badge,
+.ant-select-selection__choice .ant-badge-status-text {
+    font-size: 12px;
+    line-height: inherit;
+}
+
+.ant-select-selection__choice .ant-badge + .ant-select-selection__choice__remove {
+    vertical-align: top !important;
+}

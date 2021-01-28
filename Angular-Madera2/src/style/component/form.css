@@ -1,0 +1,10 @@
+/* style de base des formulaires */
+.form {
+    margin: 0 auto var(--space6) auto;
+}
+
+/* On force avec !important pour surchager les styles appliquer par la directive appForm */
+.ant-drawer .form {
+    max-width: none !important;
+    width: auto !important;
+}

@@ -1,0 +1,6 @@
+/* Bidouille : la propriété nzValueStyle du composant statistic
+ * ne détecte pas un 2eme changement de valeur en passant par le ts
+ * donc on change le style via css */
+.appStatisticFilter-active .ant-statistic-content-value {
+    color: var(--primary1);
+}

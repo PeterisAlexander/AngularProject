@@ -1,5 +1,0 @@
-/* La règle est générique pour garder l'espacement entre les cards même si elles sont encapsulées dans un composant */
-app-card-list:not(.cardList-multiColumns) * + app-card,
-app-card-list:not(.cardList-multiColumns) > * + * {
-    margin-top: 1px;
-}

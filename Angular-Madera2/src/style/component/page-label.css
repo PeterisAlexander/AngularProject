@@ -1,9 +1,0 @@
-/* Gestion des liens dans les sous titres */
-.pageLabel_line2 a {
-    color: inherit;
-}
-
-.pageLabel_line2 a:focus,
-.pageLabel_line2 a:hover {
-    color: var(--linkPrimaryHoverColor);
-}

@@ -1,9 +1,0 @@
-.ql-toolbar {
-    border-radius: 4px 4px 0 0;
-}
-
-.ql-toolbar,
-.ql-container {
-    background-color: var(--gray2);
-    font-family: var(--fontFamilyBase);
-}

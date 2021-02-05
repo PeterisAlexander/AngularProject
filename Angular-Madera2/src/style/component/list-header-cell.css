@@ -1,7 +1,0 @@
-app-list-header-cell:first-child {
-    padding-left: var(--listHeaderPaddingLeft);
-}
-
-app-list-header-cell:last-child {
-    padding-right: var(--listHeaderPaddingLeft);
-}

@@ -1,7 +1,0 @@
-.minHeight1lh {
-    min-height: calc(var(--fontSizeBase) * var(--lineHeightBase));
-}
-
-.height100pct {
-    height: 100%;
-}

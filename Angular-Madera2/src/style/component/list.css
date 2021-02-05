@@ -1,3 +1,0 @@
-app-card + app-list:not(.list-collapsed) {
-    margin-top: var(--listCollapsableMargin);
-}

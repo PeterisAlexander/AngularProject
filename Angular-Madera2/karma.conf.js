@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/Angular-Madera2'),
+      dir: require('path').join(__dirname, './coverage/angular-madera2'),
       subdir: '.',
       reporters: [
         { type: 'html' },

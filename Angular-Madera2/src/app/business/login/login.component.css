@@ -1,5 +1,67 @@
-div {
+.main {
+    display: flex;
+}
+
+.imgMaison {
+    display: flex;
+    flex: 0 1 auto;
+    max-height: 935px;
+    margin: -8px;
+}
+
+.logoImg {
+    display: flex;
+    width: auto;
+    height: fit-content;
+    margin-top: 30px;
+}
+
+.form {
     display: block;
-    height: 100%;
-    width: 100%;
+    margin: 20px;
+}
+
+.signIn {
+    display: block;
+    font-family: 'Roboto';
+    font-size: 80px;
+    color: #707070;
+    margin-top: 110px;
+    margin-left: 250px;
+    margin-bottom: 200px;
+    margin-right: 110px;
+}
+
+input {
+    display: block;
+    border: solid 0.5 #707070;
+    border-radius: 18px;
+    width: 500px;
+    height: 80px;
+    font-size: 48px;
+    /* color: #707070c1; */
+    padding-left: 25px;
+    margin-bottom: 50px;
+    margin-left: 140px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 32px;
+    color: #707070;
+    margin-left: 220px;
+}
+
+.btn {
+    display: block;
+    background-color: #A24611;
+    border-radius: 50px;
+    border: solid 0.5 #707070;
+    color: white;
+    width: 332px;
+    height: 80px;
+    margin-top: 55px;
+    margin-left: 200px;
+    font-size: 48px;
 }

@@ -1,0 +1,16 @@
+/* Roboto regular
+Segoe UI Semilight */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/src/assets/font/Roboto/Roboto-Regular.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(/src/assets/font/SegoeUI/SegoeUI.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

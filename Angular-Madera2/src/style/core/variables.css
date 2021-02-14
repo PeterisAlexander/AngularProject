@@ -1,0 +1,40 @@
+html {
+    /* == Palette de couleurs == */
+    --white : #FFF;
+
+    --greyHeader : #707070;
+    --grey1 : #747474;
+    --grey2 : #F2F2F2;
+    --greyLabel : #848484;
+    --grey3 : #B9B9B9;
+    --grey4 : #CCCCCC;
+    --grey5 : #B9B9B9;
+    --greyBorder : #ECECEC;
+    --grey7 : #C7C7C7;
+
+    --greyText : #787878;
+    
+    --orange : #F65F08;
+
+    --red : #F00;
+    --pink : #FF5A65;
+
+    --blue1 : #4B5AE5;
+    --blue2 : #4E8FFF;
+
+    --marron1 : #A24611;
+    --marron2 : #C26F2F;
+
+    --green1 : #06BE00;
+    --green2 : #72D600;
+
+    /* == Typographie == */
+    --text22 : 22px;
+    --text25 : 25px;
+    --text28 : 28px;
+    --text32 : 32px;
+    --text38 : 38px;
+    --text42 : 42px;
+    --text46 : 46px;
+    
+}

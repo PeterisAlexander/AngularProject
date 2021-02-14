@@ -1,0 +1,43 @@
+h1, h2, a, p {
+    font-family: 'Roboto';
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.card-main {
+    display: flex;
+    background-color: #A24611;
+    min-width: 500px;
+    height: 244px;
+    border-radius: 20px;
+    box-shadow: 0px 24px 45px rgba(0, 0, 0, 0.3);
+}
+
+.card-main i {
+    font-size: 156px;
+    margin: 50px;
+    color: white;
+}
+
+.card-content {
+    background-color: #C26F2F;
+    color: white;
+    width: 100%;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.card-content .card-nomber h1, h2{
+    margin: 20px;
+    text-align: center;
+}
+
+.card-content p {
+    margin-left: 20px;
+    margin-top: 80px;
+    font-size: 40px;
+    font-family: 'Roboto';
+}

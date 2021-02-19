@@ -34,15 +34,20 @@
 
 input {
   display: block;
-  border: solid 0.5 #707070;
+  border:#707070 solid 1px;
   border-radius: 18px;
   width: 500px;
   height: 80px;
   font-size: 48px;
-  /* color: #707070c1; */
   padding-left: 25px;
   margin-bottom: 50px;
   margin-left: 140px;
+}
+
+input::placeholder {
+  color: var(--grey4);
+  font-family: 'Roboto';
+  font-size: 48px;
 }
 
 .text {
@@ -57,14 +62,15 @@ input {
   display: block;
   background-color: #a24611;
   border-radius: 50px;
-  border: solid 0.5 #707070;
   color: white;
   width: 332px;
-  height: 80px;
+  height: auto;
   margin-top: 55px;
   margin-left: 200px;
+  padding: 10px;
   font-size: 48px;
+  font-family: 'Roboto';
   text-align: center;
   text-decoration: none;
-  padding-top: 15px;
+  justify-content: center;
 }

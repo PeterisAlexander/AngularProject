@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-bac-a-sable',
   templateUrl: './bac-a-sable.component.html',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BacASableComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {}
 
-  ngOnInit(): void {
-  }
+  public ngOnInit(): void {}
 
 }

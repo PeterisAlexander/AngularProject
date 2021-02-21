@@ -5,6 +5,7 @@ import { UserFormComponent } from './component/user-form/user-form.component';
 import { UserHeaderComponent } from './component/user-header/user-header.component';
 import { UserListComponent } from './page/user-list/user-list.component';
 import { UserRoutingModule } from './user-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { UserRoutingModule } from './user-routing.module';
     ],
     imports: [
       DashboardModule,
-      UserRoutingModule
+      UserRoutingModule,
+      SharedModule,
   ],
   providers: [],
 })

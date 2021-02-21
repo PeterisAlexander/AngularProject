@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardHomeComponent } from '../dashboard/page/dashboard-home/dashboard-home.component';
 import { UserEditComponent } from './page/user-edit/user-edit.component';
-import { UserFormComponent } from './component/user-form/user-form.component';
 import { UserListComponent } from './page/user-list/user-list.component';
 
 const routes: Routes = [
@@ -16,12 +15,15 @@ const routes: Routes = [
     },
     {
         path: 'users/new',
-        component: UserFormComponent,
-    },
-    {
-        path: 'users/edit/id',
         component: UserEditComponent,
     },
+    // {
+    //      path: ':idUser',
+    //      children: [
+    //          { path: '', redirectTo: '/edit', pathMatch: 'full' },
+    //          { path: 'edit', component: UserEditComponent },
+    //      ],
+    //  },
 ];
 
 @NgModule({

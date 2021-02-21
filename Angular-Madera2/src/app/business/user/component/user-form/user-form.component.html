@@ -1,7 +1,63 @@
-<app-user-header></app-user-header>
+<div class="cardList">
+    <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+        <div class="content-form">
+            <div>
+                <label class="labelForm">Type</label>
+                <select formControlName="type" class="selectType">
+                    <option selected>Commercant</option>
+                    <option>Acheteur</option>
+                    <option>Dessinateur</option>
+                    <option>Client</option>
+                    <option disabled>Admin</option>
+                </select>
+            </div>
+            
+            <div>
+                <label class="labelForm">Nom</label>
+                <input formControlName="nom" class="inputForm" type="text" placeholder="Enter your name">
+            </div>
+            
+            <div>
+                <label class="labelForm">Prénom</label>
+                <input formControlName="prenom" class="inputForm" type="text" placeholder="Enter your first name">
+            </div>
 
-<button>Back</button>
+            <div>
+                <label class="labelForm">Email</label>
+                <input formControlName="email" class="inputForm" type="email" placeholder="Enter your email">
+            </div>
 
-<form>
-
-</form>
+            <div>
+                <label class="labelForm">Phone</label>
+                <input formControlName="phone" class="inputForm" type="text" placeholder="(+33) 06-xx-xx-xx-xx">
+            </div>
+            
+            <!-- <div>
+                <label class="labelForm">Couleur</label>
+                <input formControlName="couleur" class="inputForm" type="text" placeholder="Enter your color">
+            </div> -->
+        </div>
+        
+        <div>
+            <div class="cardUserNew">
+                <img src="../../../assets/icon/icon_user.png">
+                <h2>Drop Photo/Logo</h2>
+                <p>Click to upload photo</p>
+            </div>
+            
+            <div class="userForm_actions">
+                <button
+                    (click)="completed.emit()"
+                    [disabled]="form.disabled"
+                    type="button"
+                    class="buttonCancel"
+                >
+                    CANCEL
+                </button>
+                <button [disabled]="form.disabled" class="buttonSave">
+                    SAVE
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,4 +1,4 @@
-export enum PersonnelEnum {
+export enum UserEnum {
     admin = 0,
     commercant,
     dessinateur,

@@ -1,0 +1,32 @@
+
+.cardUserNew {
+    display: inline-table;
+    background-color: var(--white);
+    border: var(--greyBorder) solid 10px;
+    border-radius: 15px;
+    box-shadow: 0 21px 23px rgba(0, 0, 0, 0.16);
+    width: 414px;
+    height: 402px;
+    text-align: center;
+    font-family: 'Roboto';
+    color: var(--greyLabel);
+    margin: 21px;
+}
+
+.cardUserNew img {
+    margin-top: 20px;
+    width: 180px;
+}
+
+.cardUserNew p {
+    font-size: 28px;
+}
+
+.cardUserNew h2 {
+    font-size: 42px;
+}
+
+.userForm_actions {
+    text-align: -webkit-center;
+    margin: 30px;
+}

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { CardComponent } from './component/card/card.component';
 import { BarChartComponent } from './component/chart/bar-chart/bar-chart.component';
 import { DoughnutChartComponent } from './component/chart/doughnut-chart/doughnut-chart.component';
@@ -10,18 +11,16 @@ import { DashboardHomeComponent } from './page/dashboard-home/dashboard-home.com
 
 @NgModule({
   declarations: [
-      DashboardHeaderComponent,
-      CardComponent,
-      BarChartComponent,
-      DoughnutChartComponent,
-      DashboardHomeComponent,
+    DashboardHeaderComponent,
+    CardComponent,
+    BarChartComponent,
+    DoughnutChartComponent,
+    DashboardHomeComponent,
   ],
-  exports: [
-    DashboardHeaderComponent
-  ],
+  exports: [DashboardHeaderComponent],
   imports: [
-      DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule
   ],
-  providers: [],
 })
 export class DashboardModule {}

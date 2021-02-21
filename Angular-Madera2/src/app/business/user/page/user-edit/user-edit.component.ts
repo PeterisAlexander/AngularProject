@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserEntity } from 'src/app/core/entity/user/user.entity';
 
 @Component({
   selector: 'app-user-edit',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-edit.component.css']
 })
 export class UserEditComponent implements OnInit {
+  public user: UserEntity;
 
-  constructor() { }
+  public constructor(
+    public router: Router,
+    private activated: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+      this.user = this.activated.snapshot.data.user;
   }
 
 }

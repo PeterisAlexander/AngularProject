@@ -24,6 +24,7 @@ html {
 
     --marron1 : #A24611;
     --marron2 : #C26F2F;
+    --marron3 : #ce966c;
 
     --green1 : #06BE00;
     --green2 : #72D600;
@@ -36,5 +37,203 @@ html {
     --text38 : 38px;
     --text42 : 42px;
     --text46 : 46px;
-    
+}
+
+.buttonBack {
+    display: block;
+    width: 144px;
+    height: auto;
+    background-color: var(--white);
+    border: var(--greyHeader) solid 1px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 32px;
+    font-family: 'Roboto';
+    color: var(--marron2);
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+}
+
+.labelForm {
+    display: inline-block;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 46px;
+    color: var(--greyLabel);
+    width: 15%;
+}
+
+.inputForm {
+    display: inline-block;
+    width: 615px;
+    height: 75px;
+    border: none;
+    box-shadow: 0 10px 13px rgba(0, 0, 0, 0.16);
+    padding-left: 25px;
+    font-size: 38px;
+    color: var(--grey1);
+}
+
+.inputForm::placeholder {
+    color: var(--grey4);
+    font-family: 'Roboto';
+    font-size: 38px;
+}
+
+.labelForm + .inputForm {
+    margin: 0 0 50px 150px;
+}
+
+.selectType:focus,
+.inputForm:focus,
+.buttonBack:focus,
+.buttonAdd:focus,
+.buttonSave:focus,
+.buttonCancel:focus
+ {
+    outline: none;
+}
+
+.selectType {
+    display: inline-block;
+    width: 640px;
+    height: 75px;
+    border: none;
+    box-shadow: 0 10px 13px rgba(0, 0, 0, 0.16);
+    padding-left: 25px;
+    font-size: 38px;
+    color: var(--orange);
+    margin: 0 0 50px 150px;
+}
+
+.selectType option {
+    width: auto;
+    font-size: 28px;
+}
+
+.buttonSave {
+    display: block;
+    width: 326px;
+    height: auto;
+    background-color: var(--green2);
+    border: none;
+    text-align: center;
+    padding: 5px 112px;
+    font-size: 42px;
+    font-family: 'Roboto';
+    color: var(--white);
+    justify-content: center;
+    cursor: pointer;
+}
+
+.buttonCancel {
+    display: block;
+    width: 326px;
+    height: auto;
+    background-color: var(--pink);
+    border: none;
+    text-align: center;
+    padding: 5px 84px;
+    font-size: 42px;
+    font-family: 'Roboto';
+    color: var(--white);
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.buttonAdd {
+    display: block;
+    width: 326px;
+    height: auto;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 78px;
+    font-size: 38px;
+    font-family: 'Roboto';
+    color: var(--white);
+    cursor: pointer;
+}
+
+.userForm_actions {
+    display: block;
+    margin: auto;
+}
+
+.cardList {
+    display: block;
+    margin: 20px;
+}
+
+.cardUser {
+    display: inline-table;
+    background-color: var(--marron2);
+    border-radius: 15px;
+    box-shadow: 0 21px 23px rgba(0, 0, 0, 0.16);
+    width: 326px;
+    height: 326px;
+    text-align: center;
+    font-family: 'Roboto';
+    color: white;
+    margin: 21px;
+}
+
+.cardUser img {
+    margin-top: 20px;
+    width: 127px;
+}
+
+.cardUser p {
+    font-size: 28px;
+}
+
+.cardUser h2 {
+    font-size: 32px;
+}
+
+.userList_noData,
+.userList_loading {
+    border-radius: 2px;
+    padding: var(--space6);
+    text-align: center;
+}
+
+.userList_noData {
+    box-shadow: inset 0 0 0 1px var(--black1Faded4);
+}
+
+.userList_loading {
+    color: var(--primary1);
+}
+
+.headerTitle {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.title {
+    display: inline-block;
+    margin: auto;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 46px;
+    color: var(--marron1);
+}
+
+.space {
+    visibility: collapse;
+}
+
+.content-form {
+    display: block;
+    width: 60%;
+    margin: 45px;
 }

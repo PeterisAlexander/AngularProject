@@ -1,0 +1,12 @@
+<app-dashboard-header></app-dashboard-header>
+
+<div class="headerTitle">
+    <button routerLink="/users" class="buttonBack">< Back</button>
+    <h1 class="title">New User</h1>
+    <h1 class="space">Space</h1>
+</div>
+
+<app-user-form
+    [user]="user"
+    (completed)="router.navigate(['/user'])"
+></app-user-form>

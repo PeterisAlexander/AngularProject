@@ -1,0 +1,27 @@
+<app-dashboard-header></app-dashboard-header>
+
+<div class="headerTitle">
+    <button routerLink="/users/new" class="buttonAdd">Add User</button>
+    <h1 class="title">All Users</h1>
+    <h1 class="space">Space</h1>
+</div>
+<ng-container *ngIf="!isLoading; else loadingTpl">
+    <div *ngIf="userList.length > 0; else noDataTpl" class="cardList">
+        <div 
+            *ngFor="let user of userList"
+            class="cardUser"
+        >
+            <img src="../../../assets/icon/icon_user.png">
+            <p>{{ user.prenom }} {{ user.nom }}</p>
+            <h2>{{ user.type }}</h2>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #noDataTpl>
+    <div class="userList_noData">Aucune donnée.</div>
+</ng-template>
+
+<ng-template #loadingTpl>
+    <div class="userList_loading">Chargement en cours.</div>
+</ng-template>

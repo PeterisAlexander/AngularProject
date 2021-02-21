@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { UiModule } from './ui/ui.module';
 
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  exports: [UiModule],
+  imports: [UiModule]
 })
 export class LibModule { }

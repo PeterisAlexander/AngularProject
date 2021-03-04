@@ -6,6 +6,7 @@ import { UserHeaderComponent } from './component/user-header/user-header.compone
 import { UserListComponent } from './page/user-list/user-list.component';
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CommunModule } from '../commun/commun.module';
 
 
 @NgModule({
@@ -16,10 +17,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
       UserFormComponent,
     ],
     imports: [
+      CommunModule,
       DashboardModule,
       UserRoutingModule,
       SharedModule,
   ],
   providers: [],
 })
-export class UserModule {}
+export class UserModule { }

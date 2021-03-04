@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 
 
-
 @NgModule({
   declarations: [],
   exports: [

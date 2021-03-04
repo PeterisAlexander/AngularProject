@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.card_main {
+  display: inline-table;
+  width: 95%;
+  margin: 25px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 21px 23px rgba(0, 0, 0, 0.16);
+  text-align: center;
+}
+
+img {
+  width: auto;
+}

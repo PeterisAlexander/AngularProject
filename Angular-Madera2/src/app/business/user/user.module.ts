@@ -22,4 +22,4 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   providers: [],
 })
-export class UserModule {}
+export class UserModule { }

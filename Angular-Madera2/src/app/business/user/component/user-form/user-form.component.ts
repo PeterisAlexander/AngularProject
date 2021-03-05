@@ -8,9 +8,10 @@ import { UserEnum } from 'src/app/lib/enum/user-enum.enum';
 
 interface UserFormModel {
   id: number;
-  couleur: string;
+  email: string;
   nom: string;
   prenom: string;
+  telephone: string;
   type: string;
 }
 
@@ -26,9 +27,10 @@ export class UserFormComponent implements OnInit {
     public typeEnum = UserEnum;
 
     public form = new FormGroup({
-      couleur: new FormControl(),
+      email: new FormControl(),
       nom: new FormControl(),
       prenom: new FormControl(),
+      telephone: new FormControl(),
       type: new FormControl(),
   });
 

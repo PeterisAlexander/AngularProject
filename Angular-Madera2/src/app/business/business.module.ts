@@ -9,10 +9,9 @@ import { CommunModule } from './commun/commun.module';
 @NgModule({
   declarations: [BacASableComponent],
   exports: [
-    CommunModule,
     DashboardModule,
     UserModule,
   ],
-  imports: [CommunModule]
+  imports: []
 })
 export class BusinessModule { }
